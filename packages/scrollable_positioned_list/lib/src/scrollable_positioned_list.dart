@@ -8,7 +8,7 @@ import 'dart:math';
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
-import 'package:scrollable_indexpositioned_list/scrollable_indexpositioned_list.dart';
+import '../scrollable_indexpositioned_list.dart';
 
 import 'item_positions_listener.dart';
 import 'item_positions_notifier.dart';

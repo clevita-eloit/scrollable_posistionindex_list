@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:scrollable_indexpositioned_list/scrollable_indexpositioned_list.dart';
+import '../packages/scrollable_positioned_list/lib/scrollable_indexpositioned_list.dart';
 
 void main() {
   // test('adds one to input values', () {
