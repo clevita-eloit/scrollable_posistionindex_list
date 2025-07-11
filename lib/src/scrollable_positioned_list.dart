@@ -666,7 +666,7 @@ class _ListDisplayDetails {
   _ListDisplayDetails(this.key);
 
   final itemPositionsNotifier = ItemPositionsNotifier();
-  final scrollController = ScrollController(keepScrollOffset: false);
+  final scrollController = ScrollController();
 
   /// The index of the item to scroll to.
   int target = 0;
