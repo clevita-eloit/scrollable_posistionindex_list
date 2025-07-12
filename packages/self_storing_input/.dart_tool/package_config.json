@@ -371,10 +371,10 @@
       "name": "self_storing_input",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-07-11T12:35:13.729639Z",
+  "generated": "2025-07-12T04:56:18.425820Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///Users/jerin/fvm/versions/3.24.5",

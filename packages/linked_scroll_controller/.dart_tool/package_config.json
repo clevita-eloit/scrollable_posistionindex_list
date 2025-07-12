@@ -155,10 +155,10 @@
       "name": "linked_scroll_controller",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-07-11T12:22:55.853775Z",
+  "generated": "2025-07-12T04:33:40.534487Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///Users/jerin/fvm/versions/3.24.5",

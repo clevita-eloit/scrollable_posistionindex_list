@@ -5,7 +5,7 @@ description: >
 repository: https://github.com/google/flutter.widgets/tree/master/packages/flutter_simple_treeview
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '3.5.4'
   flutter: '>=1.20.0'
 
 dependencies:
@@ -17,8 +17,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-screenshots:
-  - description: 'Example of tree controller usage.'
-    path: example/screenshots/treeview_demo.png
-  - description: 'Example of tree from JSON.'
-    path: example/screenshots/treeview_demo_JSON.png
+# screenshots:
+#   - description: 'Example of tree controller usage.'
+#     path: example/screenshots/treeview_demo.png
+#   - description: 'Example of tree from JSON.'
+#     path: example/screenshots/treeview_demo_JSON.png

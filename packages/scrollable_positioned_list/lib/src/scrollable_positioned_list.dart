@@ -1,3 +1,4 @@
+
 // Copyright 2019 The Fuchsia Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -8,9 +9,8 @@ import 'dart:math';
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
-import '../scrollable_indexpositioned_list.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import 'item_positions_listener.dart';
 import 'item_positions_notifier.dart';
 import 'positioned_list.dart';
 import 'post_mount_callback.dart';
@@ -194,13 +194,6 @@ class ScrollablePositionedList extends StatefulWidget {
 /// Controller to jump or scroll to a particular position in a
 /// [ScrollablePositionedList].
 class ItemScrollController {
-  ItemScrollController({ ScrollController? scrollController }) {
-    this.scrollController = scrollController ?? ScrollController(keepScrollOffset: false);
-  }
-
-    /// Exposes [ScrollablePositionedList]'s Primary scroll controller
-  ///
-  ScrollController? scrollController;
   /// Whether any ScrollablePositionedList objects are attached this object.
   ///
   /// If `false`, then [jumpTo] and [scrollTo] must not be called.
@@ -666,7 +659,7 @@ class _ListDisplayDetails {
   _ListDisplayDetails(this.key);
 
   final itemPositionsNotifier = ItemPositionsNotifier();
-  final scrollController = ScrollController();
+  final scrollController = ScrollController(keepScrollOffset: false);
 
   /// The index of the item to scroll to.
   int target = 0;
