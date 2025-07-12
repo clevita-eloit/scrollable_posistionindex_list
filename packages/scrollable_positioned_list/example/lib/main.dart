@@ -58,8 +58,8 @@ class _ScrollablePositionedListPageState
 
   /// Controller to scroll a certain number of pixels relative to the current
   /// scroll offset.
-  final ScrollOffsetController scrollOffsetController =
-      ScrollOffsetController();
+  // final ScrollOffsetController scrollOffsetController =
+  //     ScrollOffsetController();
 
   /// Listener that reports the position of items when the list is scrolled.
   final ItemPositionsListener itemPositionsListener =
@@ -138,7 +138,7 @@ class _ScrollablePositionedListPageState
         itemBuilder: (context, index) => item(index, orientation),
         itemScrollController: itemScrollController,
         itemPositionsListener: itemPositionsListener,
-        scrollOffsetController: scrollOffsetController,
+        // scrollOffsetController: scrollOffsetController,
         reverse: reversed,
         scrollDirection: orientation == Orientation.portrait
             ? Axis.vertical
@@ -202,12 +202,12 @@ class _ScrollablePositionedListPageState
   Widget get scrollOffsetControlButtons => Row(
         children: <Widget>[
           const Text('scroll by'),
-          scrollOffsetButton(-1000),
-          scrollOffsetButton(-100),
-          scrollOffsetButton(-10),
-          scrollOffsetButton(10),
-          scrollOffsetButton(100),
-          scrollOffsetButton(1000),
+          // scrollOffsetButton(-1000),
+          // scrollOffsetButton(-100),
+          // scrollOffsetButton(-10),
+          // scrollOffsetButton(10),
+          // scrollOffsetButton(100),
+          // scrollOffsetButton(1000),
         ],
       );
 
@@ -239,12 +239,12 @@ class _ScrollablePositionedListPageState
         style: _scrollButtonStyle(horizonalPadding: 20),
       );
 
-  Widget scrollOffsetButton(int value) => TextButton(
-        key: ValueKey<String>('Scroll$value'),
-        onPressed: () => scrollBy(value.toDouble()),
-        child: Text('$value'),
-        style: _scrollButtonStyle(horizonalPadding: 10),
-      );
+  // Widget scrollOffsetButton(int value) => TextButton(
+  //       key: ValueKey<String>('Scroll$value'),
+  //       onPressed: () => scrollBy(value.toDouble()),
+  //       child: Text('$value'),
+  //       style: _scrollButtonStyle(horizonalPadding: 10),
+  //     );
 
   Widget scrollPixelButton(int value) => TextButton(
         key: ValueKey<String>('Scroll$value'),
@@ -266,8 +266,8 @@ class _ScrollablePositionedListPageState
       curve: Curves.easeInOutCubic,
       alignment: alignment);
 
-  void scrollBy(double offset) => scrollOffsetController.animateScroll(
-      offset: offset, duration: scrollDuration, curve: Curves.easeInOutCubic);
+  // void scrollBy(double offset) => scrollOffsetController.animateScroll(
+  //     offset: offset, duration: scrollDuration, curve: Curves.easeInOutCubic);
 
   void jumpTo(int index) =>
       itemScrollController.jumpTo(index: index, alignment: alignment);
