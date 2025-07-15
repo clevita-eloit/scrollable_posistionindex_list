@@ -14,7 +14,6 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'item_positions_notifier.dart';
 import 'positioned_list.dart';
 import 'post_mount_callback.dart';
-import 'scroll_offset_notifier.dart';
 
 /// Number of screens to scroll when scrolling a long distance.
 const int _screenScrollCount = 2;
@@ -195,7 +194,8 @@ class ScrollablePositionedList extends StatefulWidget {
 /// [ScrollablePositionedList].
 class ItemScrollController {
     ItemScrollController({ ScrollController? scrollController }) {
-    this.scrollController = scrollController ?? ScrollController(keepScrollOffset: false);
+    // this.scrollController = scrollController ?? ScrollController(keepScrollOffset: false,);
+    this.scrollController = scrollController ?? ScrollController(keepScrollOffset: false,);
   }
   /// Exposes [ScrollablePositionedList]'s Primary scroll controller
   ///
@@ -429,6 +429,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
                   child: NotificationListener<ScrollNotification>(
                     onNotification: (_) => _isTransitioning,
                     child: PositionedList(
+                      shrinkWrap: widget.shrinkWrap,
                       itemBuilder: widget.itemBuilder,
                       separatorBuilder: widget.separatorBuilder,
                       itemCount: widget.itemCount,
@@ -458,6 +459,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
                     child: NotificationListener<ScrollNotification>(
                       onNotification: (_) => false,
                       child: PositionedList(
+                        shrinkWrap: widget.shrinkWrap,
                         itemBuilder: widget.itemBuilder,
                         separatorBuilder: widget.separatorBuilder,
                         itemCount: widget.itemCount,
